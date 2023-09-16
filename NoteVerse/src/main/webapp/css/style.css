@@ -1,2 +1,9 @@
 @charset "ISO-8859-1";
 
+.navbg {
+	background-color: #ffaf3e !important;
+}
+
+.text-primary {
+	color: #e9336d !important;
+}

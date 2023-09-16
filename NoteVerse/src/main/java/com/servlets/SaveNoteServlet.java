@@ -50,10 +50,9 @@ public class SaveNoteServlet extends HttpServlet {
 			s.save(note);
 			tx.commit();
 			s.close();
-			PrintWriter out=response.getWriter();
-			out.println("added successfully");
-			out.println("<a href='all_notes.jsp'>View all Notes</a>");
-			
+			request.setAttribute("action", "Created");
+			request.getRequestDispatcher("success.jsp").forward(request, response);
+					
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
